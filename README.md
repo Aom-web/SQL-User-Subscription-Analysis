@@ -11,6 +11,7 @@ SQL Analysis of yser acquisition trends. This project focuses on time-series dat
 SELECT user_id, strftime('%Y', signup_timestamp) AS "signup year"
 FROM User_Subscriptions;
 ```
+<img width="152" height="182" alt="1" src="https://github.com/user-attachments/assets/1fd35eba-7f83-4f2d-bd17-2528025e7d76" />
 
 ### 2. which users signed up in March?
 ```SQL
@@ -18,6 +19,7 @@ SELECT user_id AS Users
 FROM User_Subscriptions
 WHERE strftime('%m', signup_timestamp) = '03';
 ```
+<img width="73" height="85" alt="2" src="https://github.com/user-attachments/assets/a73366ce-860d-448d-b8d4-a2ab109724e4" />
 
 ### 3. How many users signed up each year?
 ```SQL
@@ -31,6 +33,7 @@ SELECT Year, COUNT(Year)
 FROM New
 GROUP BY Year;
 ```
+<img width="149" height="84" alt="3" src="https://github.com/user-attachments/assets/486cefb7-16f0-4465-8af2-ec47ebdd8367" />
 
 ### 4. How many users signed up in the morning, afternoon and evening?
 ```SQL
@@ -50,3 +53,4 @@ FROM New
 GROUP BY "Time Category"
 ORDER BY "Number of Users" DESC;
 ```
+<img width="223" height="111" alt="4" src="https://github.com/user-attachments/assets/414dcdec-d0bc-41d1-8ae4-42377609c4bf" />
